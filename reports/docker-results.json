@@ -1,0 +1,85 @@
+{
+  "collected_at": 1764383602,
+  "open": {
+    "operations": [
+      {
+        "duration_ms": 0,
+        "message": "bind_success",
+        "operation": "bind_port_80",
+        "status": "ok"
+      },
+      {
+        "duration_ms": 0,
+        "message": "file_written:/tmp/project13_test.txt",
+        "operation": "write_tmp_file",
+        "status": "ok"
+      },
+      {
+        "duration_ms": 0,
+        "message": "chmod_success",
+        "operation": "chmod_tmp_file",
+        "status": "ok"
+      },
+      {
+        "duration_ms": 0,
+        "message": "first_line:Name:\tpython",
+        "operation": "read_proc_self_status",
+        "status": "ok"
+      },
+      {
+        "duration_ms": 0,
+        "message": "PermissionError: [Errno 13] Permission denied: '/etc/shadow'\nTraceback (most recent call last):\n  File \"/app/app/main.py\", line 11, in op_result\n    res = func()\n          ^^^^^^\n  File \"/app/app/main.py\", line 46, in try_open_shadow\n    with open(\"/etc/shadow\") as f:\n         ^^^^^^^^^^^^^^^^^^^\nPermissionError: [Errno 13] Permission denied: '/etc/shadow'\n",
+        "operation": "open_etc_shadow",
+        "status": "failed"
+      },
+      {
+        "duration_ms": 0,
+        "message": "PermissionError: [Errno 1] Operation not permitted\nTraceback (most recent call last):\n  File \"/app/app/main.py\", line 11, in op_result\n    res = func()\n          ^^^^^^\n  File \"/app/app/main.py\", line 51, in try_setuid_root\n    os.setuid(0)\nPermissionError: [Errno 1] Operation not permitted\n",
+        "operation": "attempt_setuid_0",
+        "status": "failed"
+      }
+    ],
+    "timestamp": 1764383598
+  },
+  "hardened": {
+    "operations": [
+      {
+        "duration_ms": 0,
+        "message": "bind_success",
+        "operation": "bind_port_80",
+        "status": "ok"
+      },
+      {
+        "duration_ms": 0,
+        "message": "file_written:/tmp/project13_test.txt",
+        "operation": "write_tmp_file",
+        "status": "ok"
+      },
+      {
+        "duration_ms": 0,
+        "message": "chmod_success",
+        "operation": "chmod_tmp_file",
+        "status": "ok"
+      },
+      {
+        "duration_ms": 0,
+        "message": "first_line:Name:\tpython",
+        "operation": "read_proc_self_status",
+        "status": "ok"
+      },
+      {
+        "duration_ms": 0,
+        "message": "PermissionError: [Errno 13] Permission denied: '/etc/shadow'\nTraceback (most recent call last):\n  File \"/app/app/main.py\", line 11, in op_result\n    res = func()\n          ^^^^^^\n  File \"/app/app/main.py\", line 46, in try_open_shadow\n    with open(\"/etc/shadow\") as f:\n         ^^^^^^^^^^^^^^^^^^^\nPermissionError: [Errno 13] Permission denied: '/etc/shadow'\n",
+        "operation": "open_etc_shadow",
+        "status": "failed"
+      },
+      {
+        "duration_ms": 0,
+        "message": "PermissionError: [Errno 1] Operation not permitted\nTraceback (most recent call last):\n  File \"/app/app/main.py\", line 11, in op_result\n    res = func()\n          ^^^^^^\n  File \"/app/app/main.py\", line 51, in try_setuid_root\n    os.setuid(0)\nPermissionError: [Errno 1] Operation not permitted\n",
+        "operation": "attempt_setuid_0",
+        "status": "failed"
+      }
+    ],
+    "timestamp": 1764383602
+  }
+}
